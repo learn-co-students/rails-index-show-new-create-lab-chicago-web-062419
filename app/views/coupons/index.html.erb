@@ -1,0 +1,5 @@
+<% @coupons.each do |coupon| %>
+    <div> <%= link_to coupon[:coupon_code], coupon_path(coupon) %> | <%= coupon.store %> </div>
+<% end %>
+
+<%# It was hard to understand what Learn was asking with "Shows multiple coupons in index page." %>

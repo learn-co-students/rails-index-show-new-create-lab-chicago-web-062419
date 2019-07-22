@@ -1,5 +1,35 @@
 # Index, Show, New, Create Lab
 
+# My Steps:
+1. Review files for models and understand what attributes are needed.
+    @Coupons needs coupon_code and store attributes.
+
+2. Create a migration for @Coupons.
+    * Terminal - $ rails generate model Coupon coupon_code:string store:string
+    * Terminal - $ rake db:migrate
+    
+3. Create seeds for tests.
+    * Terminal - $ rake db:seed
+    * Double check schema and database for seeds
+    * Terminal - $ rails console
+        * Coupon.all for instances
+
+4. Create routes
+    * routes.rb - $ resources :coupons
+        * only include index, create, show:
+        * $ resources :coupons, only: [:index, :new, :create, :show]
+    * Terminal - $ rake routes (to double check)
+
+5. Create CouponController.rb
+    * class CouponsController < ApplicationController
+    * Create #index
+    * Create #show
+    * Create #new
+    * Create #create
+
+6. Create Views pages.
+
+
 ## Objectives
 
 1. Build a RESTful `index` action

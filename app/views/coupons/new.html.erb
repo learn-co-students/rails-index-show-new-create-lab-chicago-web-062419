@@ -1,0 +1,15 @@
+<h3>Coupon Form</h3>
+
+<%# Upon "Submit Post", action directs us to "/posts" %>
+<%# This form will use the POST http verb. %>
+
+<%= form_tag coupons_path do%>
+  <label>Store:</label><br>
+  <input type="text" id="store" name="coupon[store]"> <br>
+ 
+  <label>Coupon Code:</label><br>
+  <input type="text" id="coupon_code" name="coupon[coupon_code]"> <br>
+ 
+  <input type="submit" value="Submit Coupon">
+
+  <% end %>
