@@ -1,0 +1,8 @@
+<!-- * Your `index` page should show all of the coupons in the database. 
+-->
+<h2>COUPONS!</h2>
+
+<% @coupons.each do |coupon| %>
+  <div><%= link_to coupon.coupon_code, coupon_path(coupon) %>
+   <%= coupon.store %></div>
+<% end %>

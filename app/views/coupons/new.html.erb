@@ -1,0 +1,29 @@
+<!--The `new.html.erb` view template should render a form that uses the `form_tag` method
+The form should be wired up to the `create` action in the controller and, when submitted, should create a new record in the `coupons` table with the parameters passed through the form.
+* The controller should use the `redirect_to` helper method to redirect the user to the `show` page template for the newly-created coupon.-->
+<!--
+<h2>Coupon Form</h2>
+<%= form_tag coupons_path do %>
+ <label>Coupon Code:</label><br>
+ <input type="text" id="post_title" name="coupon[coupon_code]"><br>
+ <label>Store:</label><br>
+ <textarea id="post_description name="coupon[store]"></textarea><br>
+ <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+ <%= submit_tag "Submit Coupon"%>
+ <% end %>
+ -->
+
+
+<h3>Coupon Form</h3>
+
+<%= form_tag coupons_path do %>
+  <label>Coupon Code:</label><br>
+  <%= text_field_tag :"coupon[coupon_code]" %><br>
+
+  <label>Coupon for Store:</label><br>
+  <%= text_field_tag :"coupon[store]" %><br>
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <%= submit_tag "Submit Coupon" %>
+<% end %>
